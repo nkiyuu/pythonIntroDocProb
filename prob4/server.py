@@ -41,7 +41,7 @@ def check(data):
     for entry in blacklist:
         if entry in data:
             return False
-    whitelist = re.compile("^[\r\na-z0-9#\t.(),+*/:%><= _\\\-]*$", re.DOTALL)
+    whitelist = re.compile("^[\r\na-z0-9#\t.\[\]\'(),+*/:%><= _\\\-]*$", re.DOTALL)
     return bool(whitelist.match(data))
 
 
